@@ -1,1 +1,1 @@
-# shiny_hotel_booking
+# Hotel Booking Dashboard

@@ -1,16 +1,24 @@
+# Description of the Data
 
- 
- # Research questions and usage scenario
+## Content
+
+The data set contains 119390 hotel bookings during the year 2015. Each observation has 32 associated variables that describe the hotel type (`hotel`, `country`, `meal`), the reservation details (`arrival_date_month`, `arrival_date_day_of_month`, `adults`, `assigned_room_type`), and the booking method (`distribution_channel`) among others. An initial review of the data indicates it is unbalanced for example categories such as `country` (PRT - 41%) and `distribution_channel` (Travel Agents / Tour Operators - 82%). No additional variables will be derived for this project. 
+
+## Source and Aknowledgements
+
+The dataset we are using, `Hotel booking demand`, is sourced from [Kaggle](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) by Jesse Mostipak. Originally compiled by Nuno Antonio, Ana Almeida, and Luis Nunes for `Hotel Booking Demand Datasets` in `Data in Brief, Volume 22, February 2019`. Downloaded and cleaned by Thomas Mock and Antoine Bichat for #TidyTuesday during the week of February 11th, 2020.
+
+# Research questions and usage scenario
 
 ## Research questions
 
-It is always hard to find a popular place to travel at a time when hotels are available. Our app can help you to find a good time for booking a hotel at your favourite country.  
+It is always hard to find a popular place to travel at a time when hotels are available. Our app can help you to find a good time for booking a hotel at your favourite country.
 
-1. Which day of the month is the busiest day of booking hotels?
+1.  Which day of the month is the busiest day of booking hotels?
 
-2. Which countries are the busiest in terms of booking hotels?
+2.  Which countries are the busiest in terms of booking hotels?
 
-3. What is the totel hotel booking number for a specific country in a specific year? 
+3.  What is the totel hotel booking number for a specific country in a specific year?
 
 ## Usage scenario
 

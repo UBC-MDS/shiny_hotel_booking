@@ -64,11 +64,11 @@ Imagine you're the Director of Operations at [Fairmont Hotels and Resorts](https
 
 ## Usage scenario
 
-As the Director of Operations at Fairmont, Trevor Scott's challenge is to make insightful decisions based on your available business data your competitors data.
+As the Director of Operations at Fairmont, Trevor Scott's challenge is to make insightful decisions based on his available business data and his competitors data.
 In this scenario, Trevor logs into his internal hotel booking dashboard to get an overview of his current bookings. He starts by looking at today's date and then he examines the number of bookings across the globe (our dashboard), which shows a breakdown of bookings and other metrics, based on various countries. He decides to take a look at today's date from last year to get an overview of popular destinations. He wants to see if there is a business opportunity here.
 
 Trevor notices that there was a significant increase in bookings in Germany last year, which prompts him to investigate further. He finds that there was an event that people travelled for, and that bookings in hotels in the region went up. Trevor quickly realises that if he offers a promotion, then the Fairmont will attract more visitors rather than other hotel chains.
 
-Trevor also checks the hotel-wise booking counts from his internal dashboard for those hotels under his management. These plots show a breakdown of the number of bookings per hotel and their average prices. He notices that a few of them are performing poorly this week and that their average price is very high compared to others in his control. He decides to allocate more resources to market those particular hotels to attract more customers.
+Trevor also checks the hotel-wise booking counts from his internal dashboard for those hotels under his management. These plots show a breakdown of the number of bookings per hotel and their average prices. He notices that a few of them are performing poorly this week and that their average price is very high compared to others in his control. He decides to allocate more resources to market the promotion for those particular hotels to attract more customers.
 
 Overall, the hotel booking dashboard helps Trevor make informed decisions based on real-time data as well as historical data, improving his business performance and customer satisfaction.

@@ -13,7 +13,7 @@ A buyer persona is a fictional representation of our ideal customer. It's compri
 
 Buyer Personas are important because it allows us to provide for PEOPLE, not for COMPANIES.
 
-A hypothetical persona of our project is shown below: ![](persona.png)
+A hypothetical persona of our project is shown below: ![](../img/persona.png)
 
 ## Description of the Data
 
@@ -37,10 +37,10 @@ It is always hard to find a good time to visit popular places since hotels are o
 
 ## Usage scenario
 
-As a hotel manager, you log into the hotel booking dashboard to get an overview of your current bookings. You start by looking at the time stamp on the top of the dashboard to ensure that the data is up-to-date.
+As a hotel manager in Canada, Trevor Scott logs into the hotel booking dashboard to get an overview of the current bookings for hotels in countries across the world. He starts by looking at this week of last year to see if he can find any popular travelling countries around this time.
 
-Next, you examine the data on the country-wise booking counts, which shows a breakdown of bookings based on different countries. You notice that there has been a significant increase in bookings from a particular country, which prompts you to investigate further. You decide to offer a special promotion to this country to attract more bookings.
+Next, he examines the data on the country-wise booking counts, which shows a breakdown of bookings based on different countries. He notices that there was a significant increase in bookings in Germany last year, which prompts him to investigate further. He finds that there was a promotion going on by local German hotels, offering an average daily rate almost 2 times cheaper if the traveler books for a week versus if they book only a few nights. The hotel chain is well known and after investigating the same week for the past few years, it looks like they do the same promotion yearly. To attract similar opportunist getaway enthusiasts this year, Trevor decides to offer a similar promotion here in Canada, thus resulting in an increase in business.
 
-You also review the hotel-wise booking counts, which shows a breakdown of bookings based on different hotels. You notice that one of your hotels is experiencing low bookings, so you decide to allocate more resources to market that particular hotel to attract more customers.
+Trevor also checks the hotel-wise booking counts for those hotels under his management. These plots show a breakdown of the number of bookings per hotel and their average prices. He notices that a few of them are performing poorly this week and that their average price is very high compared to others in his control. He decides to apply the promotion for these hotels specifically, increasing the number customers across the hotels in his command.
 
-Overall, the hotel booking dashboard helps you make informed decisions based on real-time data, which can improve your business performance and customer satisfaction.
+Overall, the hotel booking dashboard helps Trevor make informed decisions based on real-time data as well as historical data, improving his business performance and customer satisfaction.

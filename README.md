@@ -84,4 +84,4 @@ hindrances, within range of the given filters.
 
 ## Sketch
 
-![](sketch.png)
+![](img/sketch.png)

@@ -15,10 +15,21 @@ The dataset we are using, `Hotel booking demand`, is sourced from [Kaggle](https
 It is always hard to find a popular place to travel at a time when hotels are available. Our app can help you to find a good time for booking a hotel at your favourite country.
 
 1.  Which day of the month is the busiest day of booking hotels?
-
 2.  Which countries are the busiest in terms of booking hotels?
-
 3.  What is the totel hotel booking number for a specific country in a specific year?
+
+## Motivation and Purpose
+The purpose of this visualization dashboard is to present the hotel booking data for exploratory data analysis (EDA) and predictive purposes. The primary objective of the dashboard is to summarize booking information, including the number of bookings, cancellation rates, average booking value, and other important metrics. This allows users to gain a comprehensive understanding of the data and identify significant patterns and trends. The dashboard also serves as a valuable tool for hotel managers and marketers to make informed decisions regarding pricing, promotions, and inventory management. For instance, the dashboard showcases the most popular countries for bookings, the most frequently booked room types, and the periods with the highest booking rates.
+
+## Target Audience and Persona
+A buyer persona is a fictional representation of our ideal customer. It’s comprised of: 
+- Demographic factors: Age, genders, geographic location, education level 
+- Psychographic factors: What are your buyers’ goals and challenges? What motivates them? 
+Buyer Personas are important because it allows us to provide for PEOPLE, not for COMPANIES.
+
+A hypothetical persona of our project is shown below:
+![](persona.png)
+
 
 ## Usage scenario
 

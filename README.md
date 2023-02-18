@@ -2,7 +2,10 @@
 
 Team members: Mengjun Chen, Wilfred Hass, Mohammad Reza Nabizadeh, Roan Raina
 ## Hotel industry in a glace!
-This visualization dashboard aims to present data of hotel bookings discussed above for EDA and predictive purposes. Summarizing the information of the bookings is the very first goal of creating this dashboard. With hotel bookings, our dashboard can summarize the number of bookings, cancellation rates, average booking value, and other key metrics. This allows users to quickly see the big picture and identify patterns and trends. On the other hand this visualization with be a great asset for hotel managers and hotel marketers to make informed decisions about pricing, promotions, and inventory management. For example, our dashboard shows which countries are the most popular for bookings, what types of rooms are booked most frequently, and what times of the year have the highest booking rates.
+The purpose of this visualization dashboard is to present the hotel booking data for exploratory data analysis (EDA) and predictive purposes. The primary objective of the dashboard is to summarize booking information, including the number of bookings, cancellation rates, average booking value, and other important metrics. This allows users to gain a comprehensive understanding of the data and identify significant patterns and trends. The dashboard also serves as a valuable tool for hotel managers and marketers to make informed decisions regarding pricing, promotions, and inventory management. For instance, the dashboard showcases the most popular countries for bookings, the most frequently booked room types, and the periods with the highest booking rates.
+
+
+
 ## About the data
 The data set presented and used in this project is adopted from [Hotel booking demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) data set on Kaggle website. The dataset comprises reservation details for a city hotel and a resort hotel. It contains information about the booking date, duration of the stay, number of adults, children, and babies, available parking spaces, and other related data.
 ### Data Dictionary

@@ -9,7 +9,7 @@ editor_options:
 Team members: Mengjun Chen, Wilfred Hass, Mohammad Reza Nabizadeh, Roan
 Raina
 
-## Hotel industry in a glace!
+## Hotel Industry at a Glace!
 
 The purpose of this visualization dashboard is to present the hotel
 booking data for exploratory data analysis (EDA) and predictive
@@ -24,17 +24,18 @@ dashboard showcases the most popular countries for bookings, the most
 frequently booked room types, and the periods with the highest booking
 rates.
 
-## About the data
+## About the Data
 
 The data set presented and used in this project is adopted from the
 [Hotel booking
 demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand)
-data set on the Kaggle website. The dataset comprises reservation
+data set on the Kaggle website. The data set comprises of reservation
 details for a city hotel and a resort hotel. It contains information
 about the booking date, duration of the stay, number of adults,
 children, and babies, available parking spaces, and other related data.
-More information about the features from the data set can be found in
-[the proposal](Proposal.md) or below, in the data dictionary
+A high-level overview can be found in [the proposal](Proposal.md) or a
+more in-depth explanation of individual features exist below, in the
+data dictionary.
 
 ### Data Dictionary
 

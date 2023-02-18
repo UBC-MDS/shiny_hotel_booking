@@ -8,12 +8,15 @@ The purpose of this visualization dashboard is to present the hotel booking data
 
 A buyer persona is a fictional representation of our ideal customer. It's comprised of:
 
--   `Demographic factors`: Age, genders, geographic location, education level
--   `Psychographic factors`: What are your buyers' goals and challenges? What motivates them?
+- `Demographic factors`: Age, genders, geographic location, education level
+- `Psychographic factors`: What are your buyers' goals and challenges? What motivates them?
 
 Buyer Personas are important because it allows us to provide for PEOPLE, not for COMPANIES.
 
-A hypothetical persona of our project is shown below: ![](../img/persona.png)
+In this project our role is: **Competitive Insights Platform Provider** and our target audience are **Director of Operations** or **Director of Marketing** at hotel management companies (hospitality industry)
+
+A hypothetical persona of our project is shown below by using [HubSpot Persona Visualizer Tool](https://www.hubspot.com/make-my-persona):
+![](../img/persona.png)
 
 ## Description of the Data
 
@@ -24,7 +27,7 @@ The data set contains 119390 hotel bookings during the year 2015. Each observati
 ### Data Dictionary
 
 Since the dataset includes 32 features, the
-ones we deemed most important are explained below. This list will be updated if 
+ones we deemed most important are explained below. This list will be updated if
 we decide to use any others.
 
 -   `hotel`: Hotel (H1 = Resort Hotel or H2 = City Hotel)
@@ -51,18 +54,21 @@ The data set we are using, `Hotel Booking Demand`, is sourced from [Kaggle](http
 
 ### Research questions
 
-It is always hard to find a good time to visit popular places since hotels are often fully booked. With our dashboard, you will be able to find a good time to book a hotel in your favourite country!
+Imagine you're the Director of Operations at [Fairmont Hotels and Resorts](https://www.fairmont.com/) and you are managing over 70 hotel properties worldwide. Your biggest challenge is resource allocation and pricing given the fact that your industry is affected by the global pandemic. Our app can help you to gain competitive insights over historical booking and pricing data of your hotel and your competitors. Our dashboard answers your questions like:
 
 1.  Which day of the month is the busiest day of booking hotels?
 2.  Which countries are the busiest in terms of booking hotels?
 3.  What is the total hotel booking number for a specific country in a specific year?
+4.  What is the average booking pricing in once specific regions/country?
+5.  What is the average time span between booking confirmation and check-in date?
 
 ## Usage scenario
 
-As a hotel manager in Canada, Trevor Scott logs into the hotel booking dashboard to get an overview of the current bookings for hotels in countries across the world. He starts by looking at this week of last year to see if he can find any popular travelling countries around this time.
+As the Director of Operations at Fairmont, Trevor Scott's challenge is to make insightful decisions based on his available business data and his competitors data.
+In this scenario, Trevor logs into his internal hotel booking dashboard to get an overview of his current bookings. He starts by looking at today's date and then he examines the number of bookings across the globe (our dashboard), which shows a breakdown of bookings and other metrics, based on various countries. He decides to take a look at today's date from last year to get an overview of popular destinations. He wants to see if there is a business opportunity here.
 
-Next, he examines the data on the country-wise booking counts, which shows a breakdown of bookings based on different countries. He notices that there was a significant increase in bookings in Germany last year, which prompts him to investigate further. He finds that there was a promotion going on by local German hotels, offering an average daily rate almost 2 times cheaper if the traveler books for a week versus if they book only a few nights. The hotel chain is well known and after investigating the same week for the past few years, it looks like they do the same promotion yearly. To attract similar opportunist getaway enthusiasts this year, Trevor decides to offer a similar promotion here in Canada, thus resulting in an increase in business.
+Trevor notices that there was a significant increase in bookings in Germany last year, which prompts him to investigate further. He finds that there was an event that people travelled for, and that bookings in hotels in the region went up. Trevor quickly realises that if he offers a promotion, then the Fairmont will attract more visitors rather than other hotel chains.
 
-Trevor also checks the hotel-wise booking counts for those hotels under his management. These plots show a breakdown of the number of bookings per hotel and their average prices. He notices that a few of them are performing poorly this week and that their average price is very high compared to others in his control. He decides to apply the promotion for these hotels specifically, increasing the number customers across the hotels in his command.
+Trevor also checks the hotel-wise booking counts from his internal dashboard for those hotels under his management. These plots show a breakdown of the number of bookings per hotel and their average prices. He notices that a few of them are performing poorly this week and that their average price is very high compared to others in his control. He decides to allocate more resources to market the promotion for those particular hotels to attract more customers.
 
 Overall, the hotel booking dashboard helps Trevor make informed decisions based on real-time data as well as historical data, improving his business performance and customer satisfaction.

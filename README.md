@@ -33,31 +33,8 @@ data set on the Kaggle website. The data set comprises of reservation
 details for a city hotel and a resort hotel. It contains information
 about the booking date, duration of the stay, number of adults,
 children, and babies, available parking spaces, and other related data.
-A high-level overview can be found in [the proposal](Proposal.md) or a
-more in-depth explanation of individual features exist below, in the
+A more in-depth explanation can be found in [the proposal](Proposal.md).
 data dictionary.
-
-### Data Dictionary
-
-The data dictionary presented below is aiming to make a better
-understanding of the data. Since the dataset includes 32 features, the
-ones we deemed most important are explained below.
-
--   `hotel`: Hotel (H1 = Resort Hotel or H2 = City Hotel)
--   `lead_time`: Number of days that elapsed between booked date and the
-    arrival date
--   `stays_in_weekend_nights`: Number of weekend nights (Saturday or
-    Sunday) that the guest stayed
--   `adults`: Number of adults
--   `children`: Number of children
--   `babies`: Number of babies
--   `meal`: Type of meal booked
--   `country`: Country of origin
--   `previous_cancellations`: Number of previous bookings that were
-    cancelled by the customer prior to the current booking
--   `reserved_room_type`: Code of room type reserved
--   `adr`: Average Daily Rate as defined by dividing the sum of all
-    lodging transactions by the total number of staying nights
 
 ## Description of the Dashboard
 

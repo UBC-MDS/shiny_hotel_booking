@@ -17,9 +17,31 @@ A hypothetical persona of our project is shown below: ![](../img/persona.png)
 
 ## Description of the Data
 
-### Content
+### Summary
 
 The data set contains 119390 hotel bookings during the year 2015. Each observation has 32 associated features that describe the hotel type (`hotel`, `country`, `meal`), the reservation details (`arrival_date_month`, `arrival_date_day_of_month`, `adults`, `assigned_room_type`), and the booking method (`distribution_channel`), among others. An initial review of the data indicates it is unbalanced for example categories such as `country` (PRT - 41%) and `distribution_channel` (Travel Agents / Tour Operators - 82%). We may choose to create proportions of bookings relative to each country as to normalize the heatmap. Other than that, no additional variables will be derived for this project.
+
+### Data Dictionary
+
+Since the dataset includes 32 features, the
+ones we deemed most important are explained below. This list will be updated if 
+we decide to use any others.
+
+-   `hotel`: Hotel (H1 = Resort Hotel or H2 = City Hotel)
+-   `lead_time`: Number of days that elapsed between booked date and the
+    arrival date
+-   `stays_in_weekend_nights`: Number of weekend nights (Saturday or
+    Sunday) that the guest stayed
+-   `adults`: Number of adults
+-   `children`: Number of children
+-   `babies`: Number of babies
+-   `meal`: Type of meal booked
+-   `country`: Country of origin
+-   `previous_cancellations`: Number of previous bookings that were
+    cancelled by the customer prior to the current booking
+-   `reserved_room_type`: Code of room type reserved
+-   `adr`: Average Daily Rate as defined by dividing the sum of all
+    lodging transactions by the total number of staying nights
 
 ### Source and Acknowledgements
 

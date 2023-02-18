@@ -65,10 +65,21 @@ This dashboard contains three major sections:
 -   `The interactivity control box`: This section of the dashboard
     enables the user to filter the data based on the date, hotel type,
     etc. to generate their desired plots.
--   `The map box`: This section contains an interactive map of countries that is
-    highlighted based on the user's metric of choice.
--   `The chart box`: This section presents four plots that each of the
-    representing one metric that user has selected to show.
+-   `The map box`: This section contains an interactive map of countries
+    that is highlighted based on the user's metric of choice.
+-   `The chart box`: This section presents up to four plots of the
+    metrics that the user chooses for the given filters.
+
+The interactivity control box will allow the user to choose filters for
+the data based on some of the data set features and metrics that the
+user wants to view in the map box and the chart box sections. The
+metrics could include things such as the total bookings for a country,
+the average price of bookings in a country, etc. The filters will be in
+the form of a date range of bookings, a dropdown list to select the
+hotel type and a dropdown list to select multiple countries. Users will
+then be able to compare the distributions of the metrics in the chart
+box section to see if certain countries have the amenities or
+hindrances, within range of the given filters.
 
 ## Sketch
 

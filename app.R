@@ -52,10 +52,10 @@ ui <- fluidPage(
                    end = max(data$reservation_status_date),
                    format = "mm/dd/yyyy"
                    ),
-    selectInput(inputId = 'countires',
+    selectInput(inputId = 'countries',
                 label = '🌈 Countries:',
                 choices = unique(data$country_full_name),
-                selected = "United States of America",
+                selected = NULL,
                 multiple = TRUE,
                 width = '30%',
                 size = NULL
@@ -118,9 +118,9 @@ server <- function(input, output, session) {
                    reservation_status_date < input$daterange[2])
         }
       
-      if (!is.null(input$countires)) {
+      if (!is.null(input$countries)) {
         filtered_data <- filtered_data |> 
-          filter(country_full_name %in% input$countires)
+          filter(country_full_name %in% input$countries)
         }
       
       if (!is.null(input$prop_type)) {
@@ -146,9 +146,9 @@ server <- function(input, output, session) {
                      reservation_status_date < input$daterange[2])
           }
         
-        if (!is.null(input$countires)) {
+        if (!is.null(input$countries)) {
           filtered_data <- filtered_data |> 
-            filter(country_full_name %in% input$countires)
+            filter(country_full_name %in% input$countries)
           }
         
         if (!is.null(input$prop_type)) {

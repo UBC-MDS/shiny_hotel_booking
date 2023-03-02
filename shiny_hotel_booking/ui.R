@@ -44,12 +44,12 @@ ui <- fluidPage(
   
   #Charts and heatmap row
   fluidRow(
-    column(9,
+    column(8,
            leafletOutput("mainHeatMap", width = "100%", height = "600px")
     ),
   # Place holder for charts  
-    column(3,
-           h6("Charts Placeholder")
+    column(4,
+           plotOutput("graph_avg_price", width = "100%", height = "200px")
            )
   ),
   br(),

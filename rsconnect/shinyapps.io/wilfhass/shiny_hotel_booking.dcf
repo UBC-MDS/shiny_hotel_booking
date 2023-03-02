@@ -1,0 +1,13 @@
+name: shiny_hotel_booking
+title: shiny_hotel_booking
+username:
+account: wilfhass
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8462131
+bundleId: 6908656
+url: https://wilfhass.shinyapps.io/shiny_hotel_booking/
+when: 1677791510.81327
+lastSyncTime: 1677791510.8133
+asMultiple: FALSE
+asStatic: FALSE

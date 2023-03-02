@@ -168,5 +168,15 @@ server <- function(input, output, session) {
     
   })
   
+  output$graph_avg_price <-  renderPlot({
+    
+    ggplot(reactive_data() |> group_by(arrival_date) |> summarise(mean_adr = mean(adr)),
+           aes(x=arrival_date, y=mean_adr)) +
+      geom_line(color="blue") +
+      labs(title = "Average Booking Price", 
+           y= "Average Booking Price",
+           x = "Date")
+  })
+  
 }
 

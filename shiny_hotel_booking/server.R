@@ -17,8 +17,8 @@ server <- function(input, output, session) {
         # Apply the date range, type, and country filtering
         if (!is.null(input$daterange)) {
           filtered_data <- filtered_data |>
-            filter(reservation_status_date > input$daterange[1] &
-                     reservation_status_date < input$daterange[2])
+            filter(arrival_date > input$daterange[1] &
+                     arrival_date < input$daterange[2])
         }
         
         if (!is.null(input$countries)) {
@@ -45,8 +45,8 @@ server <- function(input, output, session) {
         # Apply the date range, type, and country filtering
         if (!is.null(input$daterange)) {
           filtered_data <- filtered_data |>
-            filter(reservation_status_date > input$daterange[1] &
-                     reservation_status_date < input$daterange[2])
+            filter(arrival_date > input$daterange[1] &
+                     arrival_date < input$daterange[2])
         }
         
         if (!is.null(input$countries)) {

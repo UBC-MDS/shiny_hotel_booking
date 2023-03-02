@@ -1,6 +1,7 @@
 library(tidyverse)
 library(countrycode)
 library(geojsonio)
+library(lubridate)
 
 # Read the data and clean it
 data <- read_csv("data/hotel_bookings.csv",
@@ -21,6 +22,10 @@ data$country_full_name[data$country_full_name == 'Czechia'] <- "Czech Republic"
 data$country_full_name[data$country_full_name == 'Bosnia & Herzegovina'] <- "Bosnia and Herzegovina"
 data$country_full_name[data$country_full_name == 'Serbia'] <- "Republic of Serbia"
 data$country_full_name[data$country_full_name == 'North Macedonia'] <- "Macedonia"
+
+# create a combined date column for the arrival date
+data <- data |> 
+  mutate(arrival_date = make_date(arrival_date_year, match(arrival_date_month, month.name), arrival_date_day_of_month))
 
 # Read the map polygon data
 countries_json <- geojson_read("data/countries.geojson", what = "sp")

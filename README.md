@@ -18,6 +18,10 @@ dashboard showcases the most popular countries for bookings, the most
 frequently booked room types, and the periods with the highest booking
 rates.
 
+## Use the App
+
+You can access the deployed app on [shinyapps.io here](https://wilfhass.shinyapps.io/shiny_hotel_booking/)!
+
 ## About the Data
 
 The data set presented and used in this project is adopted from the

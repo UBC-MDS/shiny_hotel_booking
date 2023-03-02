@@ -24,7 +24,7 @@ ui <- fluidPage(
       inputId = 'countries',
       label = '🌈 Countries:',
       choices = unique(data$country_full_name),
-      selected = data$country_full_name[1],
+      selected = NULL,
       multiple = TRUE,
       width = '30%',
       size = NULL

@@ -206,7 +206,7 @@ server <- function(input, output, session) {
       geom_point(x = data$arrival_date[max_index], y = max_people, color = 'red', size = 2) +
       geom_text(aes(x = arrival_date[max_index], y = max_people, label = "Busiest Day")) +
       labs(
-        title = paste("When is th busiest day in", country_names),
+        title = paste("When is the busiest day in", country_names),
         y = "Number of People",
         x = "Data"
       ) +

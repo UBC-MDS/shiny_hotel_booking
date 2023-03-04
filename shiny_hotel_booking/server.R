@@ -188,4 +188,30 @@ server <- function(input, output, session) {
       )
   })
   
+  output$busiest_days <- renderPloy({
+    country_names <- paste(input$countries, collapse = ', ')
+    if (is.null(input$countries)){
+      country_names <- "All Countries"
+    }
+    #wrangling the data 
+    data <- reactive_data()|>
+      mutate(current_people = adults + children + babies)|>
+      group_by(arrival_date)|>
+      summarise(total_people = sum(current_people))
+    #get max point
+    max_people <- max(data$total_people, na.rm = TRUE)
+    max_index <- which.max(data$total_people)
+    
+    ggplot(data|>drop_na(), aes(x = arrival_date, y = total_people)) +
+      geom_point(color = "darkblue",
+                 fill = "lightblue") +
+      geom_point(x = data$arrival_date[max_index], y = max_people, color = 'red', size = 3)+
+      geom_text(aes(x = arrival_date[max_index], y = max_people, label = max_people))+
+      labs(
+        title = paste("Distribution of busiest days in"),
+        y = "Number of People",
+        x = "Data"
+      )
+  })
+  
 }

@@ -14,7 +14,7 @@
 - No buttons to select or deselect all options in the drop down
 - Potentially too many countries will be listed in plot titles, need to add some
   limits to the length of those titles
-- limit information is giving when mouse move to the map, there is only average price/night.
+- Limit information is giving when mouse move to the map, there is only average price/night.
 
 ## What was Implemented
 
@@ -25,7 +25,6 @@
 ## What wasn't Implemented
 
 - Reduced number of plots in chart box from 4 to 3 to conserve space
-- 
 
 ## Possible Future Improvements
 
@@ -34,5 +33,6 @@
 - Adding a new page with a data table to allow users to see the data if they
   were interested in specific hotels
 - Adding more data about specific hotel names, locations (cities) and ratings
-- extending our proposal and motivations.
+- Extending our proposal and motivations
+- Improving the `read_json` functionality to increase the speed of the dashboard.
   

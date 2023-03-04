@@ -51,26 +51,16 @@ ui <- fluidPage(
   #Charts and heatmap row
   fluidRow(column(
     8,
-    leafletOutput("mainHeatMap", width = "100%", height = "600px")
+    leafletOutput("mainHeatMap", width = "100%", height = "640px")
   ),
   # Place holder for charts
   column(
     4,
     plotOutput("graph_avg_price", width = "100%", height = "200px"),
-    plotOutput(outputId = "distPriceCountry")
-  ),
-  column(
-    5,
-    plotOutput("busiest_days", width = "100%", height = "300px")
-  )),
-  
-  br(),
-  
-  fluidRow(column(
-    12,
-    h3("Main Data Tester"),
-    DTOutput(outputId = 'table_main')
-  )),
+    plotOutput("distPriceCountry", width = "100%", height = "240px"),
+    plotOutput("busiest_days", width = "100%", height = "200px")
+  )
+),
   
   br(),
   fluidRow(

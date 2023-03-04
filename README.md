@@ -61,7 +61,7 @@ daily price according to the heatmap. They would select Portugal and now they ca
 distribution as well as how it fluctuates over the week. They can also see if there are lots of 
 bookings in Portugal as it might be a super popular place this time of year!
 
-![](img/ui.png)
+![](img/final_ui.png)
 
 
 ## Contribute!

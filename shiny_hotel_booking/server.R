@@ -2,10 +2,22 @@ library(thematic)
 library(tidyverse)
 library(leaflet)
 library(htmltools)
-library(DT)
+
+ggplot_theme <- theme(
+  plot.background = element_rect(fill = "white", color = NA),
+  panel.background = element_rect(fill = "white", color = NA),
+  panel.grid.major = element_line(color = "#DDDDDD"),
+  panel.grid.minor = element_blank(),
+  axis.line = element_line(color = "black"),
+  axis.text = element_text(color = "black"),
+  axis.title = element_text(color = "black", size = 14),
+  legend.background = element_rect(fill = "#F0F0F0", color = NA),
+  legend.text = element_text(color = "black"),
+  text = element_text(family = "Helvetica")
+)
 
 server <- function(input, output, session) {
-  thematic::thematic_shiny()
+  #thematic::thematic_shiny()
   
   #Apply the data filtering to creatively filter the main data
   reactive_data <-
@@ -91,21 +103,6 @@ server <- function(input, output, session) {
     labels
   })
   
-  output$table_main <-  renderDT({
-    # read the documentation for the arguments
-    datatable(
-      reactive_data(),
-      caption = 'Table: Observations by location.',
-      extensions = 'Scroller',
-      options = list(
-        deferRender = TRUE,
-        scrollY = 200,
-        scroller = TRUE
-      )
-    )
-    
-  })
-  
   output$mainHeatMap <- renderLeaflet({
     pal <- reactive_color_pal()
     labels <- reactive_label()
@@ -165,7 +162,8 @@ server <- function(input, output, session) {
         title = paste("Distribution of Average Prices in", country_names),
         y = "Number of Bookings",
         x = "Average Booking Price"
-      )
+      ) +
+      ggplot_theme
   })
   
   output$graph_avg_price <-  renderPlot({
@@ -174,18 +172,18 @@ server <- function(input, output, session) {
       country_names <- "All Countries"
     }
     
-    ggplot(
       reactive_data() |>
         group_by(arrival_date) |>
-        summarise(mean_adr = mean(adr)),
-      aes(x = arrival_date, y = mean_adr)
-    ) +
-      geom_line(color = "blue") +
-      labs(
-        title = paste("Average Booking Price in", country_names),
-        y = "Average Booking Price",
-        x = "Date"
-      )
+        summarise(mean_adr = mean(adr)) |>
+                    ggplot() +
+                    aes(x = arrival_date, y = mean_adr) +
+                    geom_line(color = "darkblue") +
+                    labs(
+                      title = paste("Average Booking Price in", country_names),
+                      y = "Average Booking Price",
+                      x = "Date"
+                      ) +
+        ggplot_theme
   })
   
   output$busiest_days <- renderPlot({
@@ -205,13 +203,14 @@ server <- function(input, output, session) {
     ggplot(data|>drop_na(), aes(x = arrival_date, y = total_people)) +
       geom_point(color = "darkblue",
                  fill = "lightblue") +
-      geom_point(x = data$arrival_date[max_index], y = max_people, color = 'red', size = 3)+
-      geom_text(aes(x = arrival_date[max_index], y = max_people, label = "Busiest Day"))+
+      geom_point(x = data$arrival_date[max_index], y = max_people, color = 'red', size = 2) +
+      geom_text(aes(x = arrival_date[max_index], y = max_people, label = "Busiest Day")) +
       labs(
-        title = paste("Distribution of busiest days in", country_names),
+        title = paste("When is th busiest day in", country_names),
         y = "Number of People",
         x = "Data"
-      )
+      ) +
+      ggplot_theme
   })
   
 }

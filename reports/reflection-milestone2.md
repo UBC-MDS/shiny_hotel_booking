@@ -6,6 +6,7 @@
 - Dashboard clearly communicates what we think the user would want to see
 - Dashboard is pretty to look at, not over-complicated and easy to
   read/understand
+- Specific Dataset we are using at the bottom. 
 
 ## Limitations
 
@@ -13,6 +14,7 @@
 - No buttons to select or deselect all options in the drop down
 - Potentially too many countries will be listed in plot titles, need to add some
   limits to the length of those titles
+- limit information is giving when mouse move to the map, there is only average price/night.
 
 ## What was Implemented
 
@@ -32,4 +34,5 @@
 - Adding a new page with a data table to allow users to see the data if they
   were interested in specific hotels
 - Adding more data about specific hotel names, locations (cities) and ratings
+- extending our proposal and motivations.
   

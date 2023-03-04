@@ -11,10 +11,11 @@
 
 The purpose of this visualization dashboard is to present the hotel booking data for exploratory data analysis (EDA) and predictive purposes.
 The primary objective of the dashboard is to summarize booking information, including the number of bookings, cancellation rates, average booking value, and other important metrics.
+
 This allows prospective travellers to gain a comprehensive understanding of the hotel bookings and identify significant patterns and trends.
-Armed with this information, travellers can make better informed decisions about their accomidation when they travel to get the best deal.
-The dashboard also serves as a valuable tool for hotel managers and marketers to make informed decisions regarding pricing, promotions, and inventory management.
-For instance, the dashboard showcases the most popular countries for bookings, the most frequently booked room types, and the periods with the highest booking rates.
+Armed with this information, travellers can make better informed decisions about their accomodation when they travel to get the best deal.
+
+The dashboard also serves as a valuable tool for hotel managers and marketers to make informed decisions regarding pricing, promotions, and inventory management. For instance, the dashboard showcases the most popular countries for bookings, the most frequently booked room types, and the periods with the highest booking rates. 
 
 ## Use the App
 

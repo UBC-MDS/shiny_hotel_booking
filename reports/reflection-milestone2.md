@@ -7,7 +7,6 @@
 - Dashboard is pretty to look at, not over-complicated and easy to
   read/understand
 
-
 ## Limitations
 
 - Map can be zoomed out a bit too much

@@ -1,22 +1,20 @@
 # Hotel Booking Dashboard
 
-Team members: Mengjun Chen, Wilfred Hass, Mohammad Reza Nabizadeh, Roan
-Raina
+- [Hotel Industry at a Glance](#hotel-industry-at-a-glace)
+- [About the Data](#about-the-data)
+- [Description of the Dashboard](#description-of-the-dashboard)
+- [Contribute](#contribute)
+- [How to run app locally](#how-to-run-the-app-locally)
+- [Contributors](#contributors)
 
 ## Hotel Industry at a Glace!
 
-The purpose of this visualization dashboard is to present the hotel
-booking data for exploratory data analysis (EDA) and predictive
-purposes. The primary objective of the dashboard is to summarize booking
-information, including the number of bookings, cancellation rates,
-average booking value, and other important metrics. This allows users to
-gain a comprehensive understanding of the data and identify significant
-patterns and trends. The dashboard also serves as a valuable tool for
-hotel managers and marketers to make informed decisions regarding
-pricing, promotions, and inventory management. For instance, the
-dashboard showcases the most popular countries for bookings, the most
-frequently booked room types, and the periods with the highest booking
-rates.
+The purpose of this visualization dashboard is to present the hotel booking data for exploratory data analysis (EDA) and predictive purposes.
+The primary objective of the dashboard is to summarize booking information, including the number of bookings, cancellation rates, average booking value, and other important metrics.
+This allows prospective travellers to gain a comprehensive understanding of the hotel bookings and identify significant patterns and trends.
+Armed with this infromation, travellers can make better informed decisions about their accomidation when they travel and get the best deal.
+The dashboard also serves as a valuable tool for hotel managers and marketers to make informed decisions regarding pricing, promotions, and inventory management.
+For instance, the dashboard showcases the most popular countries for bookings, the most frequently booked room types, and the periods with the highest bookingrates.
 
 ## Use the App
 
@@ -57,6 +55,25 @@ then be able to compare the distributions of the metrics in the chart
 box section to see if certain countries have the amenities or
 hindrances, within range of the given filters.
 
-## Sketch
 
-![](img/sketch.png)
+![](img/ui.png)
+
+
+## Contribute!
+Interested in contributing? Check out the [Contributing](CONTRIBUTING.md) guidelines. By contributing to this project, you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+There is substancial room to continue development of the project. Currently, we are using 5 out of 32 columns in the dataset. Help would be appreciated in adding filters for parameters of interest in addition to generating graphs for other useful metrics. 
+
+## How to run the app locally
+To run the app locally, clone the repository and execute the following in termina (from the top level directory). This will start the shiny app locally and the address will be displayed in the terminal window. 
+```bash
+Rscript app.R
+```
+
+## Contributors
+Team members: Wilfred Hass, Mengjun Chen, Mohammad Reza Nabizadeh, Roan
+Raina
+
+<a href="https://github.com/UBC-MDS/shiny_hotel_booking/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=UBC-MDS/shiny_hotel_booking&max=1000" />
+</a>

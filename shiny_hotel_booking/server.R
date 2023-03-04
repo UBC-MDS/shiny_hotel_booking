@@ -188,7 +188,7 @@ server <- function(input, output, session) {
       )
   })
   
-  output$busiest_days <- renderPloy({
+  output$busiest_days <- renderPlot({
     country_names <- paste(input$countries, collapse = ', ')
     if (is.null(input$countries)){
       country_names <- "All Countries"

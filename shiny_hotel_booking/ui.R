@@ -58,7 +58,12 @@ ui <- fluidPage(
     4,
     plotOutput("graph_avg_price", width = "100%", height = "200px"),
     plotOutput(outputId = "distPriceCountry")
+  ),
+  column(
+    5,
+    plotOutput("busiest_days", width = "100%", height = "300px")
   )),
+  
   br(),
   
   fluidRow(column(
@@ -66,6 +71,7 @@ ui <- fluidPage(
     h3("Main Data Tester"),
     DTOutput(outputId = 'table_main')
   )),
+  
   br(),
   fluidRow(
     p(

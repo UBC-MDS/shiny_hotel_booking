@@ -208,7 +208,7 @@ server <- function(input, output, session) {
       labs(
         title = paste("When is the busiest day in", country_names),
         y = "Number of People",
-        x = "Data"
+        x = "Date"
       ) +
       ggplot_theme
   })

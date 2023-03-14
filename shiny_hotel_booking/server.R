@@ -163,6 +163,8 @@ server <- function(input, output, session) {
         y = "Number of Bookings",
         x = "Average Booking Price"
       ) +
+      theme(plot.title = element_text(size = 16, face = "bold"),
+            axis.title = element_text(size = 14)) + 
       ggplot_theme
   })
   
@@ -183,6 +185,8 @@ server <- function(input, output, session) {
                       y = "Average Booking Price",
                       x = "Date"
                       ) +
+        theme(plot.title = element_text(size = 16, face = "bold"),
+              axis.title = element_text(size = 14)) +
         ggplot_theme
   })
   
@@ -208,8 +212,10 @@ server <- function(input, output, session) {
       labs(
         title = paste("When is the busiest day in", country_names),
         y = "Number of People",
-        x = "Data"
+        x = "Date"
       ) +
+      theme(plot.title = element_text(size = 16, face = "bold"),
+            axis.title = element_text(size = 14)) +
       ggplot_theme
   })
   

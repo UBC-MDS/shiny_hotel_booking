@@ -1,4 +1,5 @@
 library(shiny)
+library(shinytest2)
 
 options(shiny.autoreload = TRUE)
 

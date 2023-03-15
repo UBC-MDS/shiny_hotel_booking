@@ -52,11 +52,6 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           use-public-rspm: true
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          cache-version: 2
-          extra-packages: |
-            any::rlang
             
 # You need a renv.lock in your repo install all the R packages here with this action
       - uses: r-lib/actions/setup-renv@v2

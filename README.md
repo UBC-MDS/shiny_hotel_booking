@@ -1,5 +1,10 @@
 # Hotel Booking Dashboard
 
+<!-- badges: start -->
+[![App Deploys](https://github.com/UBC-MDS/shiny_hotel_booking/actions/workflows/deploy-app.yaml/badge.svg)](https://github.com/UBC-MDS/shiny_hotel_booking/actions/workflows/deploy-app.yaml)
+[![App Deploys](https://github.com/UBC-MDS/shiny_hotel_booking/actions/workflows/testing.yaml/badge.svg)](https://github.com/UBC-MDS/shiny_hotel_booking/actions/workflows/testing.yaml)
+<!-- badges: end -->
+
 - [Hotel Industry at a Glance](#hotel-industry-at-a-glace)
 - [About the Data](#about-the-data)
 - [Description of the Dashboard](#description-of-the-dashboard)

@@ -25,8 +25,28 @@ server <- function(input, output, session) {
       # Default data selection
       filtered_data <- data
       
+      if (is.null(input$prop_type) & is.null(input$countries)) {
+        id_no_select <- showNotification(
+          "No Countries or Property Type Selected! Selecting all countries and all property types now...", 
+          type = "warning",
+          duration = 10, # in seconds
+          closeButton = TRUE
+        )
+      }
+      
+      
       # Apply the date range, type, and country filtering
-      if (!is.null(input$daterange)) {
+      
+      if (input$daterange[2] < input$daterange[1]) {
+        id_dates <- showNotification(
+          "Selecting a start date after the end booking date is invalid!", 
+          type = "error",
+          duration = 30, # in seconds
+          closeButton = TRUE
+        )
+        
+      }
+      else if (!is.null(input$daterange)) {
         filtered_data <- filtered_data |>
           filter(arrival_date > input$daterange[1] &
                    arrival_date < input$daterange[2])
@@ -40,6 +60,14 @@ server <- function(input, output, session) {
       if (!is.null(input$prop_type)) {
         filtered_data <- filtered_data |>
           filter(hotel %in% input$prop_type)
+      }
+      if (nrow(filtered_data) == 0) {
+        id <- showNotification(
+          "There is no information for the selections chosen. Please try a new combination.",  
+          type = "warning",
+          duration = 30, # in seconds
+          closeButton = TRUE
+        )
       }
       
       filtered_data

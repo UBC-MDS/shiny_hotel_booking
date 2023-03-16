@@ -58,7 +58,8 @@ ui <- fluidPage(
     4,
     plotOutput("graph_avg_price", width = "100%", height = "200px"),
     plotOutput("distPriceCountry", width = "100%", height = "240px"),
-    plotOutput("busiest_days", width = "100%", height = "200px")
+    plotOutput("busiest_days", width = "100%", height = "200px"),
+    downloadButton("download_data", "Download Raw Data")
   )
 ),
   

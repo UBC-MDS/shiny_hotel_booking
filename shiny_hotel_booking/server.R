@@ -219,4 +219,12 @@ server <- function(input, output, session) {
       ggplot_theme
   })
   
+  output$download_data <- downloadHandler(
+    filename = "hotel_bookings.csv",
+    content = function(file) {
+      file.copy("data/hotel_bookings.csv", file)
+    },
+    contentType = "text/csv"
+  )
+  
 }

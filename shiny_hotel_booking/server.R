@@ -2,18 +2,20 @@ library(thematic)
 library(tidyverse)
 library(leaflet)
 library(htmltools)
+library(plotly)
 
 ggplot_theme <- theme(
   plot.background = element_rect(fill = "white", color = NA),
+  plot.title = element_text(size = 12, face = "bold"),
   panel.background = element_rect(fill = "white", color = NA),
   panel.grid.major = element_line(color = "#DDDDDD"),
   panel.grid.minor = element_blank(),
   axis.line = element_line(color = "black"),
   axis.text = element_text(color = "black"),
-  axis.title = element_text(color = "black", size = 14),
+  axis.title = element_text(color = "black", size = 10),
   legend.background = element_rect(fill = "#F0F0F0", color = NA),
   legend.text = element_text(color = "black"),
-  text = element_text(family = "Helvetica")
+  text = element_text(family = "Helvetica"),
 )
 
 server <- function(input, output, session) {
@@ -135,7 +137,7 @@ server <- function(input, output, session) {
     pal <- reactive_color_pal()
     labels <- reactive_label()
     
-    leaflet(countries_json) |>
+    leaflet(countries_json, options = leafletOptions(minZoom = 2)) |>
       addTiles() |>
       setView(lng = 0,
               lat = 30,
@@ -172,15 +174,16 @@ server <- function(input, output, session) {
         opacity = 0.7,
         title = NULL,
         position = "bottomright"
-      )
+      ) |>
+      setMaxBounds(-180, -50, 180, 70)
   })
   
-  output$distPriceCountry <- renderPlot({
+  output$distPriceCountry <- renderPlotly({
     country_names <- paste(input$countries, collapse = ', ')
     if (is.null(input$countries)) {
       country_names <- "All Countries"
     }
-    reactive_data() |>
+    plot_pc <- reactive_data() |>
       ggplot() +
       aes(x = adr) +
       geom_histogram(binwidth = 20,
@@ -191,34 +194,41 @@ server <- function(input, output, session) {
         y = "Number of Bookings",
         x = "Average Booking Price"
       ) +
-      theme(plot.title = element_text(size = 16, face = "bold"),
-            axis.title = element_text(size = 14)) + 
       ggplot_theme
+    ggplotly(plot_pc) |>
+      style(hovertemplate = paste(
+        "Average Daily Rate: USD %{x}<br>",
+        "Count: %{y}<br>"
+      )) |>
+      layout(showlegend = FALSE)
+    
   })
   
-  output$graph_avg_price <-  renderPlot({
+  output$graph_avg_price <-  renderPlotly({
     country_names <- paste(input$countries, collapse = ', ')
     if (is.null(input$countries)) {
       country_names <- "All Countries"
     }
-    
-      reactive_data() |>
-        group_by(arrival_date) |>
-        summarise(mean_adr = mean(adr)) |>
-                    ggplot() +
-                    aes(x = arrival_date, y = mean_adr) +
-                    geom_line(color = "darkblue") +
-                    labs(
-                      title = paste("Average Booking Price in", country_names),
-                      y = "Average Booking Price",
-                      x = "Date"
-                      ) +
-        theme(plot.title = element_text(size = 16, face = "bold"),
-              axis.title = element_text(size = 14)) +
-        ggplot_theme
+    plot_ac <- reactive_data() |>
+      group_by(arrival_date) |>
+      summarise(mean_adr = mean(adr)) |>
+      ggplot() +
+      aes(x = arrival_date, y = mean_adr) +
+      geom_line(color = "darkblue") +
+      labs(
+        title = paste("Average Booking Price in", country_names),
+        y = "Average Booking Price",
+        x = "Date"
+        ) +
+      ggplot_theme
+    ggplotly(plot_ac) |>
+      style(hovertemplate = paste(
+        "Average Daily Rate: USD %{y}<br>"
+      )) |>
+      layout(showlegend = FALSE)
   })
   
-  output$busiest_days <- renderPlot({
+  output$busiest_days <- renderPlotly({
     country_names <- paste(input$countries, collapse = ', ')
     if (is.null(input$countries)){
       country_names <- "All Countries"
@@ -232,19 +242,20 @@ server <- function(input, output, session) {
     max_people <- max(data$total_people, na.rm = TRUE)
     max_index <- which.max(data$total_people)
     
-    ggplot(data|>drop_na(), aes(x = arrival_date, y = total_people)) +
+    plot_bd <- ggplot(data|>drop_na(), aes(x = arrival_date, y = total_people)) +
       geom_point(color = "darkblue",
                  fill = "lightblue") +
-      geom_point(x = data$arrival_date[max_index], y = max_people, color = 'red', size = 2) +
-      geom_text(aes(x = arrival_date[max_index], y = max_people, label = "Busiest Day")) +
       labs(
         title = paste("When is the busiest day in", country_names),
         y = "Number of People",
         x = "Date"
       ) +
-      theme(plot.title = element_text(size = 16, face = "bold"),
-            axis.title = element_text(size = 14)) +
       ggplot_theme
+    ggplotly(plot_bd) |>
+      style(hovertemplate = paste(
+        "Total Bookings: %{y}<br>"
+      )) |>
+      layout(showlegend = FALSE)
   })
   
   output$download_data <- downloadHandler(

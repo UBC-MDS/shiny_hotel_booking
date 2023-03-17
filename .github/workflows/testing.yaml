@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: macos-latest, r: release}
+          - {os: ubuntu-latest, r: release}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -35,23 +35,15 @@ jobs:
           packages: |
             make
             gdal-bin
-            libcurl4-openssl-dev
-            libfribidi-dev
-            libgdal-dev
-            libgeos-dev libgeos++-dev
-            libharfbuzz-dev
-            libicu-dev
-            libjq-dev
-            libprotobuf-dev
-            libpng-dev
-            libproj-dev
             libssl-dev
-            libtiff-dev
+            libcurl4-openssl-dev
             libudunits2-dev
-            libv8-dev
-            libxml2-dev
-            pandoc
-            protobuf-compiler libprotoc-dev
+            libgdal-dev
+            libgeos-dev
+            libgeos++-dev
+            libicu-dev
+            libproj-dev
+            libpng-dev
             zlib1g-dev
           run: |
             sudo apt-get update
@@ -60,6 +52,14 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           use-public-rspm: true
+            
+# You need a renv.lock in your repo install all the R packages here with this action
+      - uses: r-lib/actions/setup-renv@v2
+
+      - uses: rstudio/shinytest2/actions/test-app@v1
+        with:
+          app-dir: "."
+          upload-snapshots: true
             
 # You need a renv.lock in your repo install all the R packages here with this action
       - uses: r-lib/actions/setup-renv@v2

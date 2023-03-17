@@ -22,3 +22,14 @@ test_that("{shinytest2} recording: test_startup", {
   app$expect_screenshot()
 })
 
+
+
+test_that("{shinytest2} recording: test_date_range_error", {
+  app <- AppDriver$new(variant = platform_variant(), name = "test_date_range_error", 
+      height = 990, width = 1409)
+  app$set_inputs(daterange = c("2016-03-10", "2015-02-03"))
+  Sys.sleep(2)
+  app$expect_values()
+  app$expect_screenshot()
+})
+

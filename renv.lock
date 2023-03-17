@@ -185,7 +185,7 @@
     },
     "blob": {
       "Package": "blob",
-      "Version": "1.2.4",
+      "Version": "1.2.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -193,7 +193,7 @@
         "rlang",
         "vctrs"
       ],
-      "Hash": "40415719b5a479b87949f3aa0aee737c"
+      "Hash": "10d231579bc9c06ab1c320618808d4ff"
     },
     "brio": {
       "Package": "brio",
@@ -386,10 +386,10 @@
     },
     "commonmark": {
       "Package": "commonmark",
-      "Version": "1.9.0",
+      "Version": "1.8.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "d691c61bff84bd63c383874d2d0c3307"
+      "Hash": "b6e3e947d1d7ebf3d2bdcea1bde63fe7"
     },
     "conflicted": {
       "Package": "conflicted",
@@ -907,18 +907,14 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.2",
+      "Version": "0.3.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
-        "cli",
-        "glue",
-        "grid",
-        "lifecycle",
-        "rlang"
+        "grid"
       ],
-      "Hash": "651b5a984e5a43dca1e7a6e671423233"
+      "Hash": "36b4265fb818f6a342bed217549cd896"
     },
     "haven": {
       "Package": "haven",
@@ -986,16 +982,18 @@
     },
     "htmlwidgets": {
       "Package": "htmlwidgets",
-      "Version": "1.5.4",
+      "Version": "1.6.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "grDevices",
         "htmltools",
         "jsonlite",
+        "knitr",
+        "rmarkdown",
         "yaml"
       ],
-      "Hash": "76147821cd3fcd8c4b04e1ef0498e7fb"
+      "Hash": "b677ee5954471eaa974c0d099a343a1a"
     },
     "httpcode": {
       "Package": "httpcode",
@@ -2336,13 +2334,13 @@
     },
     "wk": {
       "Package": "wk",
-      "Version": "0.7.2",
+      "Version": "0.7.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "d090e79291f852c4da96b036500d449f"
+      "Hash": "141385279f2cd7faa6a3eccd8d1279dd"
     },
     "xfun": {
       "Package": "xfun",

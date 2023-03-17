@@ -12,3 +12,13 @@ test_that("{shinytest2} recording: test_filtering", {
   app$expect_values()
 })
 
+
+
+test_that("{shinytest2} recording: test_startup", {
+  app <- AppDriver$new(variant = platform_variant(), name = "test_startup", height = 990, 
+      width = 1409)
+  Sys.sleep(10)
+  app$expect_values()
+  app$expect_screenshot()
+})
+

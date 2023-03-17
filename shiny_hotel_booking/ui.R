@@ -1,6 +1,7 @@
 library(bslib)
 library(leaflet)
 library(DT)
+library(plotly)
 
 ui <- fluidPage(
   theme = bs_theme(bootswatch = 'flatly'),

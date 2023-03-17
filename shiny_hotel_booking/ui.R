@@ -1,6 +1,7 @@
 library(bslib)
 library(leaflet)
 library(DT)
+library(plotly)
 
 ui <- fluidPage(
   theme = bs_theme(bootswatch = 'flatly'),
@@ -56,18 +57,19 @@ ui <- fluidPage(
   # Place holder for charts
   column(
     4,
-    plotOutput("graph_avg_price", width = "100%", height = "200px"),
-    plotOutput("distPriceCountry", width = "100%", height = "240px"),
-    plotOutput("busiest_days", width = "100%", height = "200px"),
-    downloadButton("download_data", "Download Raw Data")
+    plotlyOutput("graph_avg_price", width = "100%", height = "200px"),
+    plotlyOutput("distPriceCountry", width = "100%", height = "240px"),
+    plotlyOutput("busiest_days", width = "100%", height = "200px"),
+    
   )
 ),
   
   br(),
-  fluidRow(
-    p(
+  fluidRow(column(
+    9, p(
       "Ⓒ All rights reserved 2023 - 💪 💜 Proudly built by UBC MDS program students: Mengjun Chen, Wilfred Hass, Roan Raina, and Mohammad Reza Nabizadeh"
-    )
-  ),
-  
+    )),
+    column(3, 
+           downloadButton("download_data", "Download Raw Data"))
+    ),
 )

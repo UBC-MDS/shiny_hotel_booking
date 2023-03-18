@@ -1,4 +1,5 @@
 library(shinytest2)
+library(shinycssloaders)
 
 test_that("{shinytest2} recording: test_filtering", {
   app <- AppDriver$new(name = "test_filtering", height = 990, width = 1409)

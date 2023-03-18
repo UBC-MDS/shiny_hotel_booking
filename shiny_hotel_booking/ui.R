@@ -2,8 +2,12 @@ library(bslib)
 library(leaflet)
 library(DT)
 library(plotly)
+library(shinycssloaders)
+
 
 ui <- fluidPage(
+  
+
   theme = bs_theme(bootswatch = 'flatly'),
   # Page title
   titlePanel(
@@ -52,14 +56,27 @@ ui <- fluidPage(
   #Charts and heatmap row
   fluidRow(column(
     8,
-    leafletOutput("mainHeatMap", width = "100%", height = "640px")
+    withSpinner(leafletOutput("mainHeatMap", width = "100%", height = "640px"),
+                type = 2, 
+                color = 'lightgreen',
+                color.background = 'white')
   ),
   # Place holder for charts
   column(
     4,
-    plotlyOutput("graph_avg_price", width = "100%", height = "200px"),
-    plotlyOutput("distPriceCountry", width = "100%", height = "240px"),
-    plotlyOutput("busiest_days", width = "100%", height = "200px"),
+    verbatimTextOutput("status"),
+    withSpinner(plotlyOutput("graph_avg_price", width = "100%", height = "200px"),
+                type = 2, 
+                color = 'lightgreen',
+                color.background = 'white'),
+    withSpinner(plotlyOutput("distPriceCountry", width = "100%", height = "240px"),
+                type = 2, 
+                color = 'lightgreen',
+                color.background = 'white'),
+    withSpinner(plotlyOutput("busiest_days", width = "100%", height = "200px"),
+                type = 2, 
+                color = 'lightgreen',
+                color.background = 'white'),
     
   )
 ),

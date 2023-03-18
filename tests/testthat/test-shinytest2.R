@@ -18,7 +18,6 @@ test_that("{shinytest2} recording: test_filtering", {
 test_that("{shinytest2} recording: test_total_bookings", {
   app <- AppDriver$new(name = "test_total_bookings", height = 990, width = 1409)
   app$set_inputs(heatmap_metric = "Number of total bookings")
-  app$set_inputs(prop_type = character(0))
   app$set_inputs(prop_type = "City Hotel")
   app$set_inputs(daterange = c("2013-06-04", "2017-09-14"))
   app$expect_values()

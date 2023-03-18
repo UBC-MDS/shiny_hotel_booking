@@ -23,8 +23,9 @@ test_that("{shinytest2} recording: test_daterng_month", {
 
 
 
-test_that("{shinytest2} recording: test_download_data", {
-  app <- AppDriver$new(name = "test_download_data", height = 990, width = 1409)
-  app$expect_download("download_data")
+test_that("{shinytest2} recording: test_USA", {
+  app <- AppDriver$new(name = "test_USA", seed = 532, height = 990, width = 1409)
+  app$set_inputs(countries = "United States of America")
+  app$expect_values()
 })
 

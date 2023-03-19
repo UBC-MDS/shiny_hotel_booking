@@ -5,9 +5,9 @@ account: wilfhass
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 8462131
-bundleId: 6959287
+bundleId: 6979267
 url: https://wilfhass.shinyapps.io/shiny_hotel_booking/
-when: 1678849697.02312
-lastSyncTime: 1678849697.02314
+when: 1679254633.26131
+lastSyncTime: 1679254633.26134
 asMultiple: FALSE
 asStatic: FALSE
